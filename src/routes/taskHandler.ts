@@ -11,6 +11,10 @@ router.post('/createTask',TaskController.createTask);
 
 //route to read tasks:  R
 router.get("/readTasks", TaskController.readTasks);
+//route to read remaining tasks:  
+router.get("/readRemainingTasks", TaskController.readRemainingTasks);
+//route to read finished tasks:  
+router.get("/readFinishedTasks", TaskController.readFinishedTasks);
 
 //route to update task: U
 router.put('/updateTask/:id',TaskController.updatedTask);

@@ -13,6 +13,16 @@ export function readTasks() {
   const readData = TaskHandlerModel.readTasks();
   return readData;
 }
+//service to handle read task
+export function readRemainingTasks() {
+  const readData = TaskHandlerModel.readRemainingTasks();
+  return readData;
+}
+//service to handle read task
+export function readFinishedTasks() {
+  const readData = TaskHandlerModel.readFinishedTasks();
+  return readData;
+}
 
 //service to handle update task
 export function updatedTask(id:string,updatedTask:ITask){

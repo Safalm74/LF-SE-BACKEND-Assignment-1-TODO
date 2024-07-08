@@ -52,11 +52,19 @@ export function readTasks() {
 }
 
 //reading reamining task
-export function readReaminingTasks() {
+export function readRemainingTasks() {
   const taskRemaining = tasks.filter((task) => {
     return !task.is_finished;
   });
   return taskRemaining;
+}
+
+//reading finished task
+export function readFinishedTasks() {
+  const taskFinished = tasks.filter((task) => {
+    return task.is_finished;
+  });
+  return taskFinished;
 }
 
 //change task constained on tasks array

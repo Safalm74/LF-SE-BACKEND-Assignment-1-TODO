@@ -23,6 +23,18 @@ export function readTasks(req: Request, res: Response) {
   res.json(data);
 }
 
+//controller function to readtask
+export function readRemainingTasks(req: Request, res: Response) {
+  const data = TaskhandlerService.readRemainingTasks();
+  res.json(data);
+}
+
+//controller function to readtask
+export function readFinishedTasks(req: Request, res: Response) {
+  const data = TaskhandlerService.readFinishedTasks();
+  res.json(data);
+}
+
 //controller function to update task
 export function updatedTask(req: Request, res: Response) {
   const id = req.params.id;
