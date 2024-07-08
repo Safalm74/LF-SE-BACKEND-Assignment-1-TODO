@@ -29,10 +29,15 @@ export function readReaminingTasks(){
 
 export function createTask(task:ITask){
     const newTaskId=`${tasks.length+1}`;
+    const initialFinishFlag=false;
     const newTask={
         id:newTaskId,
+        is_finished:initialFinishFlag,
         ...task
     }
     tasks.push(newTask);
+    console.log(tasks);
+    return true;
 }
+
 
