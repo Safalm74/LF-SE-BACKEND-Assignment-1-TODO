@@ -7,5 +7,13 @@ export function readTasks() {
 }
 
 export function createTask(task:ITask) {
-    return TaskHandlerModel.createTask(task);
+  return TaskHandlerModel.createTask(task);
+}
+
+export function deleteTask(taskId:string) {
+  return TaskHandlerModel.deleteTask(taskId);
+}
+
+export function updatedTask(id:string,updatedTask:ITask){
+  return TaskHandlerModel.updateTask(id,updatedTask);
 }

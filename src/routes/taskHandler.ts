@@ -13,4 +13,9 @@ router.get("/", (req, res) => {
 router.get("/readTasks", TaskController.readTasks);
 
 router.post('/createTask',TaskController.createTask);
+
+router.delete('/deleteTask/:id',TaskController.deleteTask);
+
+router.put('/updateTask/:id',TaskController.updatedTask);
+
 export default router;

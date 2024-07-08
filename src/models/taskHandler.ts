@@ -5,7 +5,7 @@ type task={
         name: string,
         is_finished:boolean,
 }
-const tasks :task[]=[
+let tasks :task[]=[
     {
         id:'1',
         name:'wash dress',
@@ -40,4 +40,22 @@ export function createTask(task:ITask){
     return true;
 }
 
+export function deleteTask(id:string){
+    tasks=tasks.filter(
+        ({id:taskId})=>{
+            return !(taskId===id);
+        }
+    )
+}
+
+export function updateTask(id:string,updatedTask:ITask){
+    for (let i=0;i<tasks.length;i++){
+        if(tasks[i].id===id){
+            console.log('updating ',id);
+            tasks[i].name=updatedTask.name;
+            return true
+        }
+    }
+    return false;
+}
 
