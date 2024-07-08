@@ -1,12 +1,15 @@
 import { Request, Response } from "express";
-import * as TaskhandlerService from "../services/taskHandlers";
-import { ITask } from "../interface/task";
 
+//importing services for task handler
+import * as TaskhandlerService from "../services/taskHandlers";
+
+//controller function to readtask
 export function readTasks(req: Request, res: Response) {
   const data = TaskhandlerService.readTasks();
   res.json(data);
 }
 
+//controller function to createtask
 export function createTask(req: Request, res: Response) {
   const { body } = req;
   try {
@@ -21,6 +24,7 @@ export function createTask(req: Request, res: Response) {
   }
 }
 
+//controller function to delete task
 export function deleteTask(req: Request, res: Response) {
   const id = req.params.id;
   try {
@@ -34,6 +38,8 @@ export function deleteTask(req: Request, res: Response) {
     });
   }
 }
+
+//controller function to update task
 export function updatedTask(req: Request, res: Response) {
   const id = req.params.id;
   const { body } = req;
