@@ -8,9 +8,11 @@ app.use(express.json());
 
 app.use(indexRouter);
 
+//server port
+const serverPort=config.port?config.port:8000
 app.listen(
-    config.port,
+    serverPort,
     ()=>{
-        console.log(`Listening in port ${config.port} `)
+        console.log(`Listening in port ${serverPort} `)
     }
 );
