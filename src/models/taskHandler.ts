@@ -28,7 +28,7 @@ function checkOnTasks(id:string){
 export function createTask(task: ITask) {
   for (let taskobj of tasks) {
     if (taskobj.name == task.name) {
-      return "Already Exists";
+      return "Task is already created";
     }
   }
   //getting new id by increasing latest id by 1
@@ -51,7 +51,7 @@ export function readTasks() {
   return tasks;
 }
 
-//reading reamining task
+//reading remaining task
 export function readRemainingTasks() {
   const taskRemaining = tasks.filter((task) => {
     return !task.is_finished;

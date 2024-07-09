@@ -10,7 +10,7 @@ export function createTask(req: Request, res: Response) {
       Message: TaskhandlerService.createTask(body),
     });
   } catch (e) {
-    console.log("Error Occured", e);
+    console.log("Error Occurred: ", e);
     res.json({
       Error: e,
     });
@@ -44,7 +44,7 @@ export function updatedTask(req: Request, res: Response) {
       msg: TaskhandlerService.updatedTask(id, body),
     });
   } catch (e) {
-    console.log("Error Occured", e);
+    console.log("Error Occurred: ", e);
     res.json({
       Error: e,
     });
@@ -59,7 +59,7 @@ export function deleteTask(req: Request, res: Response) {
       msg: TaskhandlerService.deleteTask(id),
     });
   } catch (e) {
-    console.log("Error Occured", e);
+    console.log("Error Occurred: ", e);
     res.json({
       Error: e,
     });
